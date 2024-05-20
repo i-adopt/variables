@@ -1,4 +1,4 @@
-# variables
+# Variables modelled based on the I-ADOPT Framework Ontology
 This is a repository of I-ADOPT variables and can serve as a knowledge base for I-ADOPT variable decomposition.
 
 
