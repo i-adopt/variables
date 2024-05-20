@@ -8,24 +8,24 @@ assignees: ''
 
 ---
 
-## PID of Variable
+*PID of Variable*:
 
-## Variable Description
+*Variable Description*:
 
-## Property (label)
+*Property (label)*:
 
-## Object of Interest (label)
+*Object of Interest (label)*:
 
-## Matrix (label)
+*Matrix (label)*:
 
-## Context Object(s) (label)
+*Context Object(s) (label)*:
 
-## Constraint(s) (label) and which Entity it constraints
+*Constraint(s) (label) and which Entity it constraints*:
 
-## Dimension Information
+*Dimension Information*:
 
-## Applicable Unit(s)
+*Applicable Unit(s)*:
 
-## Link to a Publication of the Variable or Method 
+*Link to a Publication of the Variable or Method*: 
 
-## Link to ttl File in this Repository (optional)
+*Link to Turtle File (ttl) in this Repository (optional)*:
