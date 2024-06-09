@@ -7,15 +7,17 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 envthes:30319
-  iadopt:hasMatrix envthes:24 ;
-  a iadopt:Variable ;
-  iadopt:hasProperty envthes:30318 ;
+  a iadopt:Variable, skos:Concept ;
+  skos:prefLabel "soil hydraulic conductivity"@en ;
   iadopt:hasObjectOfInterest envthes:20538 ;
-  skos:definition "Soil hydraulic conductivity is a measure of the efficiency of bulk flow through soil, and defined as the flow rate per unit pressure driving force."@en ;
-  skos:broader envthes:22133 ;
-  dc:modified "2024-05-16"^^xsd:date ;
+  dc:modified "2024-06-09"^^xsd:date ;
+  dc:source <https://prometheusprotocols.net/function/water-relations/hydraulic-conductance-and-conductivity/> ;
   dc:created "2023-02-26"^^xsd:date ;
-  skos:prefLabel "soil hydraulic conductivity"@en .
+  skos:definition "Soil hydraulic conductivity is a measure of the efficiency of bulk flow through soil, and defined as the flow rate per unit pressure driving force."@en ;
+  iadopt:hasProperty envthes:30318 ;
+  iadopt:hasMatrix envthes:24 ;
+  skos:broader envthes:22133 ;
+  skos:inScheme envthes: .
 
 iadopt:Variable
   rdfs:label "Variable" ;
@@ -24,6 +26,10 @@ iadopt:Variable
 iadopt:hasProperty
   rdfs:comment "A Variable has a Property that characterizes an Entity." ;
   rdfs:label "hasProperty" .
+
+envthes:24
+  skos:prefLabel "sol"@ro, "sol"@fr, "soil"@en, "تربة"@ar, "muld"@et, "Boden"@de, "tlo"@hr, "maaperä"@fi, "půda"@cs, "dirvožemis, gruntas"@lt, "gleba"@pl, "pôda"@sk, "έδαφος"@el, "jord"@sv, "jord"@da, "suolo"@it, "suelos"@es, "solos"@pt, "Почва"@bg, "augsne"@lv, "tla, prst, zemlja"@sl, "jordsmonn"@no, "talaj"@hu, "bodem"@nl ;
+  a skos:Concept .
 
 iadopt:hasMatrix
   rdfs:subPropertyOf iadopt:hasContextObject ;
@@ -35,9 +41,9 @@ envthes:22133
   a skos:Concept ;
   skos:narrower envthes:30319 .
 
-envthes:24
-  skos:prefLabel "sol"@ro, "sol"@fr, "soil"@en, "تربة"@ar, "muld"@et, "Boden"@de, "tlo"@hr, "maaperä"@fi, "půda"@cs, "dirvožemis, gruntas"@lt, "gleba"@pl, "pôda"@sk, "έδαφος"@el, "jord"@sv, "jord"@da, "suolo"@it, "suelos"@es, "solos"@pt, "Почва"@bg, "augsne"@lv, "tla, prst, zemlja"@sl, "jordsmonn"@no, "talaj"@hu, "bodem"@nl ;
-  a skos:Concept .
+envthes:
+  skos:prefLabel "EnvThes"@en ;
+  a owl:Ontology, skos:ConceptScheme .
 
 iadopt:hasObjectOfInterest
   rdfs:comment "A Variable has an Entity whose Property is observed." ;
