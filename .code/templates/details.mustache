@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf8" />
+  <title>I-Adopt Variables</title>
+  <link href="../styles.css" rel="stylesheet" />
+</head>
+<body>
+  <h1>I-Adopt Variables</h1>
+
+  <h2>{{variable.label}}</h2>
+  <div class="desc">
+    {{variable.comment}}
+  </div>
+
+  <dl>
+
+    <dt>Object of Interest</dt>
+    <dd>
+      <a href="{{ooi.url}}">{{ooi.label}}</a>
+      <div class="desc">
+        {{ooi.comment}}
+      </div>
+      {{#ooi.constraints.length}}
+        <i>Constraints</i>
+        <ul>
+          {{#ooi.constraints}}
+            <li>
+              <a href="{{url}}">{{label}}</a>
+              <div class="desc">
+                {{comment}}
+              </div>
+            </li>
+          {{/ooi.constraints}}
+        </ul>
+      {{/ooi.constraints.length}}
+    </dd>
+
+    <dt>Property</dt>
+    <dd>
+      <a href="{{prop.url}}">{{prop.label}}</a>
+      <div class="desc">
+        {{prop.comment}}
+      </div>
+    </dd>
+
+    {{#matrix}}
+      <dt>Matrix</dt>
+      <dd>
+        <a href="{{url}}">{{label}}</a>
+        <div class="desc">
+          {{comment}}
+        </div>
+          {{#matrix.constraints.length}}
+            <i>Constraints</i>
+            <ul>
+              {{#matrix.constraints}}
+                <li>
+                  <a href="{{url}}">{{label}}</a>
+                  <div class="desc">
+                    {{comment}}
+                  </div>
+                </li>
+              {{/matrix.constraints}}
+            </ul>
+          {{/matrix.constraints.length}}
+      </dd>
+    {{/matrix}}
+
+    {{#context.length}}
+      <dt>ContextObject</dt>
+      {{#context}}
+        <dd>
+          <a href="{{url}}">{{label}}</a>
+          <div class="desc">
+            {{comment}}
+          </div>
+          {{#.}}
+          {{#constrained.length}}
+            <i>Constraints</i>
+            <ul>
+              {{#constrained}}
+                <li>
+                  <a href="{{url}}">{{label}}</a>
+                  <div class="desc">
+                    {{comment}}
+                  </div>
+                </li>
+              {{/constrained}}
+            </ul>
+          {{/constrained.length}}
+          {{/.}}
+        </dd>
+      {{/context}}
+    {{/context.length}}
+
+
+    {{#constraints.length}}
+      <dt>(Unassigned) Constraints</dt>
+      {{#constraints}}
+        <dd>
+          <a href="{{url}}">{{label}}</a>
+          <div class="desc">
+            {{comment}}
+          </div>
+        </dd>
+      {{/constraints}}
+    {{/constraints.length}}
+
+  </dl>
+
+</body>
+</html>

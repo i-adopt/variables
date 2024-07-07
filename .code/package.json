@@ -1,0 +1,19 @@
+{
+  "name": "iadopt-variables",
+  "version": "1.0.0",
+  "description": "prepare IAdopt Variables for github pages",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "publish": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "Sirko Schindler",
+  "license": "MIT",
+  "dependencies": {
+    "@comunica/query-sparql-rdfjs": "^3.2.0",
+    "mustache": "^4.2.0",
+    "n3": "^1.17.4",
+    "rdfxml-streaming-parser": "^2.4.0"
+  }
+}

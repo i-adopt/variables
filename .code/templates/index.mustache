@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf8" />
+  <title>I-Adopt Variables</title>
+  <link href="./styles.css" rel="stylesheet" />
+</head>
+<body>
+  <h1>I-Adopt Variables</h1>
+
+  {{#sections}}
+    <h2>{{folder}}</h2>
+    <ul>
+      {{#entries}}
+        <li>
+          <a href="{{details}}">{{variable.label}}</a>
+          <a href="{{download}}" class="download">
+            <img src="rdf.svg" />
+          </a>
+          <div class="desc">
+            {{{variable.comment}}}
+          </div>
+        </li>
+      {{/entries}}
+    </ul>
+  {{/sections}}
+</body>
+</html>
