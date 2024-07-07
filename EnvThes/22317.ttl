@@ -1,0 +1,53 @@
+@prefix envthes: <http://vocabs.lter-europe.net/EnvThes/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+envthes:22317
+  a skos:Concept, iadopt:Variable ;
+  skos:broader envthes:20935 ;
+  dc:created "2016-03-31"^^xsd:date ;
+  skos:definition "The true direction from which the wind is blowing at a given location (i.e., wind blowing from the north to the south is a north wind). It is normally measured in tens of degrees from 10 degrees clockwise through 360 degrees. North is 360 degrees. A wind direction of 0 degrees is only used when wind is calm."@en ;
+  skos:exactMatch <https://vocab.lternet.edu/vocab/vocab/?tema=634>, <http://aims.fao.org/aos/agrovoc/c_29583>, <http://en.wikipedia.org/wiki/wind_direction> ;
+  skos:inScheme envthes: ;
+  skos:prefLabel "wind direction"@en ;
+  dc:modified "2024-06-09"^^xsd:date ;
+  dc:creator "herbert.schentz@umweltbundesamt.at"@en ;
+  iadopt:hasContextObject envthes:21920 ;
+  skos:altLabel "direction of wind"@en ;
+  iadopt:hasProperty <http://vocab.nerc.ac.uk/collection/S06/current/S0600112/> ;
+  iadopt:hasObjectOfInterest <http://purl.obolibrary.org/obo/ENVO_01000793> ;
+  skos:scopeNote "US LTER controlled vocabulary"@en .
+
+envthes:20935
+  skos:prefLabel "variable"@en ;
+  a skos:Concept ;
+  skos:narrower envthes:22317 .
+
+iadopt:Variable
+  rdfs:label "Variable" ;
+  a owl:Class .
+
+iadopt:hasProperty
+  rdfs:comment "A Variable has a Property that characterizes an Entity." ;
+  rdfs:label "hasProperty" .
+
+envthes:
+  skos:prefLabel "EnvThes"@en ;
+  a owl:Ontology, skos:ConceptScheme .
+
+iadopt:hasObjectOfInterest
+  rdfs:comment "A Variable has an Entity whose Property is observed." ;
+  rdfs:label "hasObjectOfInterest" .
+
+iadopt:hasContextObject
+  rdfs:comment "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
+  rdfs:label "hasContextObject" .
+
+envthes:21920
+  skos:prefLabel "atmosfera"@pt, "atmosfera"@pl, "atmosfera"@lt, "atmosfera"@it, "atmosfera"@hr, "ατμόσφαιρα"@el, "atmosféra"@sk, "atmosféra"@cs, "atmósfera"@es, "atmosfære"@no, "atmosfære"@da, "atmosfär"@sv, "atmosferă"@ro, "atmosphère"@fr, "atmosfeer"@nl, "Атмосфера"@bg, "atmoszféra"@hu, "atmosfēra"@lv, "Atmosphäre"@de, "ozračje, atmosfera"@sl, "ilmakehä"@fi, "atmosfäär, õhkkond"@et, "الجو- الغلاف الجوي"@ar, "atmosphere"@en ;
+  a skos:Concept .
+

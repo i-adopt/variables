@@ -1,0 +1,16 @@
+.desc {
+  font-size: 80%;
+  font-style: italic;
+}
+
+dt {
+  font-weight: bold;
+}
+
+.download {
+  margin-left: 1.2em;
+}
+.download img {
+  height: 0.8em;
+  vertical-align: middle;
+}

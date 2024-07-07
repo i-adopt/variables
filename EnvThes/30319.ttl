@@ -1,0 +1,59 @@
+@prefix envthes: <http://vocabs.lter-europe.net/EnvThes/> .
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+envthes:30319
+  a iadopt:Variable, skos:Concept ;
+  skos:prefLabel "soil hydraulic conductivity"@en ;
+  iadopt:hasObjectOfInterest envthes:20538 ;
+  dc:modified "2024-06-09"^^xsd:date ;
+  dc:source <https://prometheusprotocols.net/function/water-relations/hydraulic-conductance-and-conductivity/> ;
+  dc:created "2023-02-26"^^xsd:date ;
+  skos:definition "Soil hydraulic conductivity is a measure of the efficiency of bulk flow through soil, and defined as the flow rate per unit pressure driving force."@en ;
+  iadopt:hasProperty envthes:30318 ;
+  iadopt:hasMatrix envthes:24 ;
+  skos:broader envthes:22133 ;
+  skos:inScheme envthes: .
+
+iadopt:Variable
+  rdfs:label "Variable" ;
+  a owl:Class .
+
+iadopt:hasProperty
+  rdfs:comment "A Variable has a Property that characterizes an Entity." ;
+  rdfs:label "hasProperty" .
+
+envthes:24
+  skos:prefLabel "sol"@ro, "sol"@fr, "soil"@en, "تربة"@ar, "muld"@et, "Boden"@de, "tlo"@hr, "maaperä"@fi, "půda"@cs, "dirvožemis, gruntas"@lt, "gleba"@pl, "pôda"@sk, "έδαφος"@el, "jord"@sv, "jord"@da, "suolo"@it, "suelos"@es, "solos"@pt, "Почва"@bg, "augsne"@lv, "tla, prst, zemlja"@sl, "jordsmonn"@no, "talaj"@hu, "bodem"@nl ;
+  a skos:Concept .
+
+iadopt:hasMatrix
+  rdfs:subPropertyOf iadopt:hasContextObject ;
+  rdfs:comment "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
+  rdfs:label "hasMatrix" .
+
+envthes:22133
+  skos:prefLabel "hydraulic conductivity"@en ;
+  a skos:Concept ;
+  skos:narrower envthes:30319 .
+
+envthes:
+  skos:prefLabel "EnvThes"@en ;
+  a owl:Ontology, skos:ConceptScheme .
+
+iadopt:hasObjectOfInterest
+  rdfs:comment "A Variable has an Entity whose Property is observed." ;
+  rdfs:label "hasObjectOfInterest" .
+
+envthes:30318
+  skos:prefLabel "flow rate per unit pressure"@en ;
+  a skos:Concept .
+
+envthes:20538
+  skos:prefLabel "水"@zh, "水"@ja, "water"@en ;
+  a skos:Concept .
+

@@ -1,0 +1,66 @@
+@prefix envthes: <http://vocabs.lter-europe.net/EnvThes/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+envthes:21557
+  skos:prefLabel "ciśnienie"@pl, "Druck"@de, "tryk"@da, "presiune"@ro, "πίεση"@el, "spiediens"@lv, "الضغط"@ar, "presión"@es, "tlak, pritisk"@sl, "tlak"@sk, "tlak"@hr, "tlak"@cs, "trykk"@no, "pressão"@pt, "nyomás/terhelés"@hu, "pression"@fr, "slėgis"@lt, "pressure"@en, "pressione"@it, "druk"@nl, "Налягане"@bg, "paine"@fi, "tryck"@sv, "rõhk"@et ;
+  a skos:Concept .
+
+iadopt:Variable
+  rdfs:label "Variable" ;
+  a owl:Class .
+
+envthes:30340
+  iadopt:hasProperty envthes:21557 ;
+  dc:modified "2024-06-09"^^xsd:date ;
+  iadopt:hasObjectOfInterest envthes:23 ;
+  skos:altLabel "suface atmospheric pressure"@en ;
+  iadopt:hasContextObject envthes:21920 ;
+  skos:prefLabel "surface air pressure"@en ;
+  a iadopt:Variable, skos:Concept ;
+  skos:broader envthes:30339 ;
+  iadopt:hasConstraint envthes:10316 ;
+  skos:inScheme envthes: ;
+  dc:created "2024-04-05"^^xsd:date .
+
+iadopt:hasProperty
+  rdfs:comment "A Variable has a Property that characterizes an Entity." ;
+  rdfs:label "hasProperty" .
+
+envthes:30339
+  skos:prefLabel "air pressure"@en ;
+  a iadopt:Variable, skos:Concept ;
+  skos:narrower envthes:30340 .
+
+envthes:
+  skos:prefLabel "EnvThes"@en ;
+  a owl:Ontology, skos:ConceptScheme .
+
+iadopt:hasObjectOfInterest
+  rdfs:comment "A Variable has an Entity whose Property is observed." ;
+  rdfs:label "hasObjectOfInterest" .
+
+iadopt:hasContextObject
+  rdfs:comment "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
+  rdfs:label "hasContextObject" .
+
+iadopt:hasConstraint
+  rdfs:comment "A Variable has a Constraint, that confines an Entity involved in the observation." ;
+  rdfs:label "hasConstraint" .
+
+envthes:21920
+  skos:prefLabel "atmosfera"@pt, "atmosfera"@pl, "atmosfera"@lt, "atmosfera"@it, "atmosfera"@hr, "ατμόσφαιρα"@el, "atmosféra"@sk, "atmosféra"@cs, "atmósfera"@es, "atmosfære"@no, "atmosfære"@da, "atmosfär"@sv, "atmosferă"@ro, "atmosphère"@fr, "atmosfeer"@nl, "Атмосфера"@bg, "atmoszféra"@hu, "atmosfēra"@lv, "Atmosphäre"@de, "ozračje, atmosfera"@sl, "ilmakehä"@fi, "atmosfäär, õhkkond"@et, "الجو- الغلاف الجوي"@ar, "atmosphere"@en ;
+  a skos:Concept .
+
+envthes:10316
+  skos:prefLabel "surface"@en ;
+  a skos:Concept .
+
+envthes:23
+  skos:prefLabel "αέρας"@el, "oras"@lt, "vzduch"@sk, "vzduch"@cs, "ilma"@fi, "õhk"@et, "ar"@pt, "air"@fr, "air"@en, "luft"@sv, "luft"@no, "luft"@da, "powietrze"@pl, "هواء"@ar, "Luft"@de, "Въздух"@bg, "lucht"@nl, "aer"@ro, "aire"@es, "zrak"@sl, "zrak"@hr, "aria"@it, "levegő"@hu, "gaiss"@lv ;
+  a skos:Concept .
+

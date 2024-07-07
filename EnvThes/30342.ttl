@@ -1,0 +1,59 @@
+@prefix envthes: <http://vocabs.lter-europe.net/EnvThes/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+envthes:20935
+  skos:prefLabel "variable"@en ;
+  a skos:Concept ;
+  skos:narrower envthes:30342 .
+
+envthes:30342
+  dc:creator "herbert.schentz@umweltbundesamt.at"@en ;
+  skos:exactMatch <http://en.wikipedia.org/wiki/wind_speed>, <http://aims.fao.org/aos/agrovoc/c_29582>, <http://linkeddata.ge.imati.cnr.it:2020/resource/EARTh/27860>, <https://vocab.lternet.edu/vocab/vocab/?tema=635> ;
+  iadopt:hasProperty <http://qudt.org/vocab/quantitykind/Speed> ;
+  skos:scopeNote "US LTER controlled vocabulary"@en ;
+  a iadopt:Variable, skos:Concept ;
+  skos:inScheme envthes: ;
+  skos:altLabel "speed of wind"@en ;
+  skos:broader envthes:20935 ;
+  skos:definition "The rate at which air is moving horizontally past a given point"@en ;
+  skos:prefLabel "wind speed"@en ;
+  iadopt:hasObjectOfInterest <http://purl.obolibrary.org/obo/ENVO_01000793> ;
+  dc:created "2016-03-31"^^xsd:date ;
+  skos:narrower envthes:30341 ;
+  dc:modified "2024-06-09"^^xsd:date ;
+  iadopt:hasContextObject envthes:21920 .
+
+iadopt:Variable
+  rdfs:label "Variable" ;
+  a owl:Class .
+
+iadopt:hasProperty
+  rdfs:comment "A Variable has a Property that characterizes an Entity." ;
+  rdfs:label "hasProperty" .
+
+envthes:
+  skos:prefLabel "EnvThes"@en ;
+  a owl:Ontology, skos:ConceptScheme .
+
+iadopt:hasObjectOfInterest
+  rdfs:comment "A Variable has an Entity whose Property is observed." ;
+  rdfs:label "hasObjectOfInterest" .
+
+envthes:30341
+  skos:prefLabel "near-surface wind speed"@en ;
+  a iadopt:Variable, skos:Concept ;
+  skos:broader envthes:30342 .
+
+iadopt:hasContextObject
+  rdfs:comment "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
+  rdfs:label "hasContextObject" .
+
+envthes:21920
+  skos:prefLabel "atmosfera"@pt, "atmosfera"@pl, "atmosfera"@lt, "atmosfera"@it, "atmosfera"@hr, "ατμόσφαιρα"@el, "atmosféra"@sk, "atmosféra"@cs, "atmósfera"@es, "atmosfære"@no, "atmosfære"@da, "atmosfär"@sv, "atmosferă"@ro, "atmosphère"@fr, "atmosfeer"@nl, "Атмосфера"@bg, "atmoszféra"@hu, "atmosfēra"@lv, "Atmosphäre"@de, "ozračje, atmosfera"@sl, "ilmakehä"@fi, "atmosfäär, õhkkond"@et, "الجو- الغلاف الجوي"@ar, "atmosphere"@en ;
+  a skos:Concept .
+
