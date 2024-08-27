@@ -1,28 +1,40 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf8" />
+  <meta charset="utf-8">
   <title>I-Adopt Variables</title>
-  <link href="./styles.css" rel="stylesheet" />
+  <link href="./styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>I-Adopt Variables</h1>
+  <header>
+    <h1>I-Adopt Variables</h1>
+    <p>Your comprehensive resource for I-Adopt variables and associated data.</p>
+  </header>
 
-  {{#sections}}
-    <h2>{{folder}}</h2>
-    <ul>
-      {{#entries}}
-        <li>
-          <a href="{{details}}">{{variable.label}}</a>
-          <a href="{{download}}" class="download">
-            <img src="rdf.svg" />
-          </a>
-          <div class="desc">
-            {{{variable.comment}}}
-          </div>
-        </li>
-      {{/entries}}
-    </ul>
-  {{/sections}}
+  <main>
+    {{#sections}}
+      <section>
+        <h2>{{folder}}</h2>
+        <ul class="variable-list">
+          {{#entries}}
+            <li class="variable-item">
+              <article>
+                <h3><a href="{{details}}">{{variable.label}}</a></h3>
+                <p>{{{variable.comment}}}</p>
+                <a href="{{download}}" class="download" title="Download RDF">
+                  <img src="rdf.svg" alt="Download RDF">
+                </a>
+              </article>
+            </li>
+          {{/entries}}
+        </ul>
+      </section>
+    {{/sections}}
+  </main>
+
+  <footer>
+    <p>&copy; 2024 I-Adopt. All rights reserved.</p>
+  </footer>
 </body>
 </html>

@@ -1,113 +1,115 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf8" />
-  <title>I-Adopt Variables</title>
-  <link href="../styles.css" rel="stylesheet" />
+  <meta charset="utf-8">
+  <title>{{variable.label}} - I-Adopt Variable Details</title>
+  <link href="./styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>I-Adopt Variables</h1>
+  <header>
+    <h1><a href="../index.html">I-Adopt Variables</a></h1>
+    <p>Your comprehensive resource for I-Adopt variables and associated data.</p>
+  </header>
 
-  <h2>{{variable.label}}</h2>
-  <div class="desc">
-    {{variable.comment}}
-  </div>
+  <main>
+    <section>
+      <h2>{{variable.label}}</h2>
+      <p class="description">{{variable.comment}}</p>
+    </section>
 
-  <dl>
+    <section>
+      <h3>Object of Interest</h3>
+      <dl>
+        <dt><a href="{{ooi.url}}">{{ooi.label}}</a></dt>
+        <dd class="description">{{ooi.comment}}</dd>
+        {{#ooi.constraints.length}}
+          <dt>Constraints</dt>
+          <dd>
+            <ul class="constraints-list">
+              {{#ooi.constraints}}
+                <li class="constraint-item">
+                  <a href="{{url}}">{{label}}</a>
+                  <p class="description">{{comment}}</p>
+                </li>
+              {{/ooi.constraints}}
+            </ul>
+          </dd>
+        {{/ooi.constraints.length}}
+      </dl>
+    </section>
 
-    <dt>Object of Interest</dt>
-    <dd>
-      <a href="{{ooi.url}}">{{ooi.label}}</a>
-      <div class="desc">
-        {{ooi.comment}}
-      </div>
-      {{#ooi.constraints.length}}
-        <i>Constraints</i>
-        <ul>
-          {{#ooi.constraints}}
-            <li>
-              <a href="{{url}}">{{label}}</a>
-              <div class="desc">
-                {{comment}}
-              </div>
-            </li>
-          {{/ooi.constraints}}
-        </ul>
-      {{/ooi.constraints.length}}
-    </dd>
-
-    <dt>Property</dt>
-    <dd>
-      <a href="{{prop.url}}">{{prop.label}}</a>
-      <div class="desc">
-        {{prop.comment}}
-      </div>
-    </dd>
+    <section>
+      <h3>Property</h3>
+      <dl>
+        <dt><a href="{{prop.url}}">{{prop.label}}</a></dt>
+        <dd class="description">{{prop.comment}}</dd>
+      </dl>
+    </section>
 
     {{#matrix}}
-      <dt>Matrix</dt>
-      <dd>
-        <a href="{{url}}">{{label}}</a>
-        <div class="desc">
-          {{comment}}
-        </div>
-          {{#matrix.constraints.length}}
-            <i>Constraints</i>
-            <ul>
+    <section>
+      <h3>Matrix</h3>
+      <dl>
+        <dt><a href="{{url}}">{{label}}</a></dt>
+        <dd class="description">{{comment}}</dd>
+        {{#matrix.constraints.length}}
+          <dt>Constraints</dt>
+          <dd>
+            <ul class="constraints-list">
               {{#matrix.constraints}}
-                <li>
+                <li class="constraint-item">
                   <a href="{{url}}">{{label}}</a>
-                  <div class="desc">
-                    {{comment}}
-                  </div>
+                  <p class="description">{{comment}}</p>
                 </li>
               {{/matrix.constraints}}
             </ul>
-          {{/matrix.constraints.length}}
-      </dd>
+          </dd>
+        {{/matrix.constraints.length}}
+      </dl>
+    </section>
     {{/matrix}}
 
     {{#context.length}}
-      <dt>ContextObject</dt>
-      {{#context}}
-        <dd>
-          <a href="{{url}}">{{label}}</a>
-          <div class="desc">
-            {{comment}}
-          </div>
-          {{#.}}
-          {{#constrained.length}}
-            <i>Constraints</i>
-            <ul>
+    <section>
+      <h3>Context Objects</h3>
+      <dl>
+        {{#context}}
+        <dt><a href="{{url}}">{{label}}</a></dt>
+        <dd class="description">{{comment}}</dd>
+        {{#constrained.length}}
+          <dt>Constraints</dt>
+          <dd>
+            <ul class="constraints-list">
               {{#constrained}}
-                <li>
+                <li class="constraint-item">
                   <a href="{{url}}">{{label}}</a>
-                  <div class="desc">
-                    {{comment}}
-                  </div>
+                  <p class="description">{{comment}}</p>
                 </li>
               {{/constrained}}
             </ul>
-          {{/constrained.length}}
-          {{/.}}
-        </dd>
-      {{/context}}
+          </dd>
+        {{/constrained.length}}
+        {{/context}}
+      </dl>
+    </section>
     {{/context.length}}
 
-
     {{#constraints.length}}
-      <dt>(Unassigned) Constraints</dt>
-      {{#constraints}}
-        <dd>
-          <a href="{{url}}">{{label}}</a>
-          <div class="desc">
-            {{comment}}
-          </div>
-        </dd>
-      {{/constraints}}
+    <section>
+      <h3>Unassigned Constraints</h3>
+      <dl>
+        {{#constraints}}
+        <dt><a href="{{url}}">{{label}}</a></dt>
+        <dd class="description">{{comment}}</dd>
+        {{/constraints}}
+      </dl>
+    </section>
     {{/constraints.length}}
+  </main>
 
-  </dl>
-
+  <footer>
+    <p>&copy; 2024 I-Adopt. All rights reserved.</p>
+  </footer>
 </body>
 </html>
