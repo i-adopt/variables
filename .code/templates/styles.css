@@ -14,3 +14,60 @@ dt {
   height: 0.8em;
   vertical-align: middle;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 0.5em;
+}
+
+.variable-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.variable-item {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.variable-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.variable-item p {
+  margin: 0.5em 0;
+}
+
+.download {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.download img {
+  vertical-align: middle;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
