@@ -1,5 +1,7 @@
 Variable Description
 
+Participant Name(s): Barbara Magagna
+
 Preferred Variable Label: water level of lake (stagnant surface water) 
 
 Alternative Variable Label: depth of water body in lake (stagnant surface water)
