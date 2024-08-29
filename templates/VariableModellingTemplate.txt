@@ -1,5 +1,7 @@
 Variable Description
 
+Participant Name(s):
+
 Preferred Variable Label: 
 
 Alternative Variable Label:
