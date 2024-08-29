@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{variable.label}} - I-Adopt Variable Details</title>
+  <title>{{variable.label}} - I-ADOPT Variable Details</title>
   <link href="../styles.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <header>
-    <h1><a href="../index.html">I-Adopt Variables</a></h1>
-    <p>Your comprehensive resource for I-Adopt variables and associated data.</p>
+    <h1><a href="../index.html">I-ADOPT Variables</a></h1>
+    <p>Your comprehensive resource for I-ADOPT variables and associated data.</p>
   </header>
 
   <main>
@@ -19,7 +19,15 @@
     </section>
 
     <section>
-      <h3>Object of Interest</h3>
+      <h3>Property:</h3>
+      <dl>
+        <dt><a href="{{prop.url}}">{{prop.label}}</a></dt>
+        <dd class="description">{{prop.comment}}</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3>Object of Interest:</h3>
       <dl>
         <dt><a href="{{ooi.url}}">{{ooi.label}}</a></dt>
         <dd class="description">{{ooi.comment}}</dd>
@@ -39,17 +47,9 @@
       </dl>
     </section>
 
-    <section>
-      <h3>Property</h3>
-      <dl>
-        <dt><a href="{{prop.url}}">{{prop.label}}</a></dt>
-        <dd class="description">{{prop.comment}}</dd>
-      </dl>
-    </section>
-
     {{#matrix}}
     <section>
-      <h3>Matrix</h3>
+      <h3>Matrix:</h3>
       <dl>
         <dt><a href="{{url}}">{{label}}</a></dt>
         <dd class="description">{{comment}}</dd>
@@ -72,7 +72,7 @@
 
     {{#context.length}}
     <section>
-      <h3>Context Objects</h3>
+      <h3>Context Objects:</h3>
       <dl>
         {{#context}}
         <dt><a href="{{url}}">{{label}}</a></dt>
@@ -97,7 +97,7 @@
 
     {{#constraints.length}}
     <section>
-      <h3>Unassigned Constraints</h3>
+      <h3>Unassigned Constraints:</h3>
       <dl>
         {{#constraints}}
         <dt><a href="{{url}}">{{label}}</a></dt>
@@ -109,7 +109,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2024 I-Adopt. All rights reserved.</p>
+    <p>&copy; 2024 I-ADOPT. All rights reserved.</p>
   </footer>
 </body>
 </html>

@@ -29,7 +29,7 @@ body {
   color: #333;
   line-height: 1.6;
   display: grid;
-  grid-template-rows: 170px 1fr 60px;
+  grid-template-rows: 170px calc( 100% - 230px ) 60px;
   grid-template-areas: "top" "center" "bottom";
 }
 
@@ -39,6 +39,10 @@ header {
   padding: 20px;
   text-align: center;
   grid-area: top;
+}
+
+h1 a {
+  color: #fff;
 }
 
 h1, h2 {
@@ -79,6 +83,7 @@ h1, h2 {
 main {
   grid-area: center;
   padding: 1em;
+  overflow: auto;
 }
 
 footer {
