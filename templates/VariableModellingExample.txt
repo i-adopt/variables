@@ -1,0 +1,44 @@
+Variable Description
+
+Preferred Variable Label: water level of lake (stagnant surface water) 
+
+Alternative Variable Label: depth of water body in lake (stagnant surface water)
+
+Definition: depth of water body of a lake, which is described also as stagnant surface water and freshwater
+
+Property (Label): depth
+
+Property (URI): http://qudt.org/vocab/quantitykind/Depth
+
+Object of Interest (Label): water body
+
+Object of Interest (URI): http://vocab.nerc.ac.uk/collection/S26/current/MAT00640
+
+Matrix (Label): lake
+
+Matrix (URI): http://purl.obolibrary.org/obo/ENVO_00000020
+
+Context Object(s) (Label): surface water
+
+Context Object(s) (URI): http://vocabs.lter-europe.net/EnvThes/30264
+
+Context Object(s) (Label): freshwater
+
+Context Object(s) (URI): http://vocabs.lter-europe.net/EnvThes/20914
+
+Constraint(s) (label) (constrained Entity): stagnant (surface water)
+
+Constraint(s) (URI): http://vocabs.lter-europe.net/EnvThes/30346
+
+
+Additional Information
+
+Qualitative/Quantitative variable: quantitative
+
+Applicable Unit(s): cm, m
+
+Controlled list:
+
+Link to an online resource describing the Variable or Method: https://blog.aem.eco/fundamentals_of_water_level_measurement
+
+Comment: to demonstrate how to handle multiple ContextObjects (or Constraints) we added another term and URI in new lines.
