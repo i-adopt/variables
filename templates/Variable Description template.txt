@@ -1,0 +1,38 @@
+Variable Description
+
+Preferred Variable Label:
+
+Alternative Variable Label:
+
+Property (Label):
+
+Property (URI):
+
+Object of Interest (Label):
+
+Object of Interest (URI):
+
+Matrix (Label):
+
+Matrix (URI):
+
+Context Object(s) (Label) (use ',' if you use more than one):
+
+Context Object(s) (URI) (use ',' if you use more than one):
+
+Constraint(s) (label) and which Entity it constraints (use ',' if you use more than one):
+
+Constraint(s) (URI) (use ',' if you use more than one):
+
+
+Additional Information
+
+Qualitative/Quantitative variable:
+
+Applicable Unit(s):
+
+Controlled list:
+
+Link to an online resource describing the Variable or Method: 
+
+Comment:
