@@ -1,0 +1,66 @@
+@prefix envthes: <http://vocabs.lter-europe.net/EnvThes/> .
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+envthes:30351
+  iadopt:hasConstraint envthes:30346 ;
+  iadopt:hasProperty <http://qudt.org/vocab/quantitykind/Depth> ;
+  a skos:Concept, iadopt:Variable ;
+  skos:definition "depth of water body in lake, stagnant surface water"@en ;
+  dc:modified "2024-09-02"^^xsd:date ;
+  skos:altLabel "stagnant surface water"@en, "depth of water body in lake"@en ;
+  iadopt:hasMatrix <http://purl.obolibrary.org/obo/ENVO_00000020> ;
+  dc:created "2024-06-07"^^xsd:date ;
+  skos:broader envthes:30025 ;
+  skos:inScheme envthes: ;
+  dc:creator <https://orcid.org/0000-0003-2195-3997> ;
+  iadopt:hasObjectOfInterest <http://vocab.nerc.ac.uk/collection/S26/current/MAT00640/> ;
+  skos:prefLabel "water level in lake, stagnant surface water"@en ;
+  iadopt:hasContextObject envthes:30264 .
+
+iadopt:Variable
+  rdfs:label "Variable" ;
+  a owl:Class .
+
+iadopt:hasProperty
+  rdfs:comment "A Variable has a Property that characterizes an Entity." ;
+  rdfs:label "hasProperty" .
+
+iadopt:hasMatrix
+  rdfs:subPropertyOf iadopt:hasContextObject ;
+  rdfs:comment "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
+  rdfs:label "hasMatrix" .
+
+envthes:30025
+  skos:prefLabel "water level"@en ;
+  a skos:Concept ;
+  skos:narrower envthes:30351 .
+
+envthes:
+  skos:prefLabel "EnvThes"@en ;
+  a owl:Ontology, skos:ConceptScheme .
+
+envthes:30264
+  skos:prefLabel "surface water"@en ;
+  a skos:Concept .
+
+iadopt:hasObjectOfInterest
+  rdfs:comment "A Variable has an Entity whose Property is observed." ;
+  rdfs:label "hasObjectOfInterest" .
+
+envthes:30346
+  skos:prefLabel "stagnant"@en ;
+  iadopt:constrains <http://vocab.nerc.ac.uk/collection/S26/current/MAT00640/> ;
+  a iadopt:Constraint, skos:Concept .
+
+iadopt:hasContextObject
+  rdfs:comment "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
+  rdfs:label "hasContextObject" .
+
+iadopt:hasConstraint
+  rdfs:comment "A Variable has a Constraint, that confines an Entity involved in the observation." ;
+  rdfs:label "hasConstraint" .
