@@ -8,7 +8,7 @@ Provided Variable Name:
 
 Chosen Preferred Label:
 
-Alternative Variable Label:
+Alternative Label:
 
 Definition:
 
