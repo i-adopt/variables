@@ -1,12 +1,20 @@
 Variable Description
 
-Participant Name(s): Barbara Magagna
+Participant Name(s), (ORCID): Barbara Magagna (0000-0003-2195-3997)
 
-Preferred Variable Label: water level of lake (stagnant surface water) 
+Contact email: barbara@gofair.foundation
+
+Provided Variable Name: water level of lake
+
+Chosen Preferred Label: water level of lake (stagnant surface water)
+
+Chosen Preferred Label: water level of lake (stagnant surface water) 
 
 Alternative Variable Label: depth of water body in lake (stagnant surface water)
 
 Definition: depth of water body of a lake, which is described also as stagnant surface water and freshwater
+
+Comments explaining your reasoning: To be able to measure depth we need to have a three-dimensional body not just a surface, therefore we added water body as the object of interest
 
 Property (Label): depth
 
@@ -35,12 +43,10 @@ Constraint(s) (URI): http://vocabs.lter-europe.net/EnvThes/30346
 
 Additional Information
 
-Qualitative/Quantitative variable: quantitative
+Quantitative or Qualitative variable: quantitative
 
 Applicable Unit(s): cm, m
 
-Controlled list:
+Controlled list: not applicable
 
-Link to an online resource describing the Variable or Method: https://blog.aem.eco/fundamentals_of_water_level_measurement
-
-Comment: to demonstrate how to handle multiple ContextObjects (or Constraints) we added another term and URI in new lines.
+Online Resoure (URL): https://blog.aem.eco/fundamentals_of_water_level_measurement
