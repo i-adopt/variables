@@ -1,10 +1,18 @@
 Variable Description
 
-Participant Name(s):
+Participant Name(s), (ORCID):
 
-Preferred Variable Label: 
+Contact email:
+
+Provided Variable Name: 
+
+Chosen Preferred Label:
 
 Alternative Variable Label:
+
+Definition:
+
+Comments explaining your reasoning:
 
 Property (Label):
 
@@ -29,12 +37,10 @@ Constraint(s) (URI):
 
 Additional Information
 
-Qualitative/Quantitative variable:
+Quantitative or Qualitative variable:
 
 Applicable Unit(s):
 
 Controlled list:
 
-Link to an online resource describing the Variable or Method: 
-
-Comment:
+Online Resoure (URL): 
