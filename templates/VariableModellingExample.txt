@@ -6,11 +6,9 @@ Contact email: barbara@gofair.foundation
 
 Provided Variable Name: water level of lake
 
-Chosen Preferred Label: water level of lake (stagnant surface water)
-
 Chosen Preferred Label: water level of lake (stagnant surface water) 
 
-Alternative Variable Label: depth of water body in lake (stagnant surface water)
+Alternative Label: depth of water body in lake (stagnant surface water)
 
 Definition: depth of water body of a lake, which is described also as stagnant surface water and freshwater
 
@@ -45,7 +43,7 @@ Additional Information
 
 Quantitative or Qualitative variable: quantitative
 
-Applicable Unit(s): cm, m
+Applicable Unit(s): centimetre, meter
 
 Controlled list: not applicable
 
