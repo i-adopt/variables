@@ -7,25 +7,26 @@ labels: ''
 assignees: ''
 
 ---
+**Information about the variable**
 
-*PID of Variable*:
+*Name(s) commonly given to the variable in your domain*:
 
-*Variable Description*:
+*Description of the variable*:
 
-*Property (label)*:
+*Commonly used Unit(s) for that variable or vector dimension*:
 
-*Object of Interest (label)*:
+*Link to a Publication describing the Variable if available*: 
 
-*Matrix (label)*:
+**Proposed decomposition using I-ADOPT**
 
-*Context Object(s) (label)*:
+*What is the Property (label)*:
 
-*Constraint(s) (label) and which Entity it constraints*:
+*What is the Object of Interest (label)*:
 
-*Dimension Information*:
+*Does it need a Matrix (label)*:
 
-*Applicable Unit(s)*:
+*Does it need a Context Object(s) (label)*:
 
-*Link to a Publication of the Variable or Method*: 
+*Does it have Constraint(s) (label) and which Entity is being constrained*:
 
-*Link to Turtle File (ttl) in this Repository (optional)*:
+*Link to the Turtle File (ttl) deposited in this Repository (optional)*:
