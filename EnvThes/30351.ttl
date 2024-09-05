@@ -54,8 +54,8 @@ iadopt:hasObjectOfInterest
 
 envthes:30346
   skos:prefLabel "stagnant"@en ;
-  iadopt:constrains <http://vocab.nerc.ac.uk/collection/S26/current/MAT00640/> ;
-  a iadopt:Constraint, skos:Concept .
+  a iadopt:Constraint, skos:Concept ;
+  iadopt:constrains <http://vocab.nerc.ac.uk/collection/S26/current/MAT00640/> .
 
 iadopt:hasContextObject
   rdfs:comment "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
@@ -64,3 +64,4 @@ iadopt:hasContextObject
 iadopt:hasConstraint
   rdfs:comment "A Variable has a Constraint, that confines an Entity involved in the observation." ;
   rdfs:label "hasConstraint" .
+
