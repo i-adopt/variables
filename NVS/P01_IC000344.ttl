@@ -1,0 +1,43 @@
+PREFIX cpm:    <http://purl.org/voc/cpm#>
+PREFIX dc:     <http://purl.org/dc/terms/>
+PREFIX dcat:   <http://www.w3.org/ns/dcat#>
+PREFIX dce:    <http://purl.org/dc/elements/1.1/>
+PREFIX dct:    <http://purl.org/dc/terms/>
+PREFIX grg:    <http://www.isotc211.org/schemas/grg/>
+PREFIX iop:    <https://w3id.org/iadopt/ont#>
+PREFIX ns0:    <http://www.w3.org/ns/dx/conneg/altr#>
+PREFIX ns1:    <http://www.w3.org/ns/dx/prof/>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX pav:    <http://purl.org/pav/>
+PREFIX prov:   <https://www.w3.org/ns/prov#>
+PREFIX puv:    <https://w3id.org/env/puv#>
+PREFIX qudt:   <https://qudt.org/2.1/schema/qudt#>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg:    <http://purl.org/linked-data/registry#>
+PREFIX semapv: <http://w3id.org/semapv/vocab/>
+PREFIX skos:   <http://www.w3.org/2004/02/skos/core#>
+PREFIX sssom:  <https://w3id.org/sssom/schema/>
+PREFIX void:   <http://rdfs.org/ns/void#>
+
+<http://vocab.nerc.ac.uk/collection/P01/current/IC000344/>
+        rdf:type                 skos:Concept;
+        dce:identifier           "SDN:P01::IC000344";
+        dc:date                  "2018-05-30 12:21:50.0";
+        dc:identifier            "SDN:P01::IC000344";
+        pav:authoredOn           "2018-05-30 12:21:50.0";
+        pav:hasCurrentVersion    <http://vocab.nerc.ac.uk/collection/P01/current/IC000344/1/>;
+        pav:version              "1";
+        void:inDataset           <http://vocab.nerc.ac.uk/.well-known/void>;
+        owl:deprecated           "false";
+        owl:versionInfo          "1";
+        skos:altLabel            "WetWt_ENDS_SB_BE007123";
+        skos:definition          "The wet weight concentration of the specified analyte in the specified organism or part thereof."@en;
+        skos:notation            "SDN:P01::IC000344";
+        skos:note                "accepted"@en;
+        skos:prefLabel           "Concentration of endosulfan sulfate {CAS 1031-07-8} per unit wet weight of biota {Ostrea edulis (ITIS: 79885: WoRMS 140658) [Subcomponent: flesh]}"@en;
+        iop:hasConstraint        <http://purl.obolibrary.org/obo/PATO_0001823>;
+        iop:hasContextObject     <http://www.marinespecies.org/aphia.php?p=taxdetails&id=140658>;
+        iop:hasMatrix            <http://vocab.nerc.ac.uk/collection/S21/current/S21S037/> , <http://vocab.nerc.ac.uk/collection/S12/current/S1214/>;
+        iop:hasObjectOfInterest  <http://vocab.nerc.ac.uk/collection/S27/current/CS003625/>;
+        iop:hasProperty          <http://vocab.nerc.ac.uk/collection/S06/current/S0600045/> .
