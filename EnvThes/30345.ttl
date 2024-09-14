@@ -1,0 +1,69 @@
+@prefix envthes: <http://vocabs.lter-europe.net/EnvThes/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+envthes:21524
+  skos:prefLabel "温度"@zh, "温度"@ja, "temperature"@en ;
+  a skos:Concept .
+
+iadopt:Variable
+  rdfs:label "Variable" ;
+  a owl:Class .
+
+iadopt:hasProperty
+  rdfs:comment "A Variable has a Property that characterizes an Entity." ;
+  rdfs:label "hasProperty" .
+
+envthes:30345
+  iadopt:hasConstraint envthes:30346 ;
+  dc:creator <https://orcid.org/0000-0003-2195-3997> ;
+  skos:prefLabel "water temperature of lake, stagnant surface water"@en ;
+  iadopt:hasObjectOfInterest <http://vocab.nerc.ac.uk/collection/S26/current/MAT00640/> ;
+  a skos:Concept, iadopt:Variable ;
+  skos:definition "temperature of the water body of a lake, stagnant surface water"@en ;
+  iadopt:hasMatrix <http://purl.obolibrary.org/obo/ENVO_00000020> ;
+  skos:inScheme envthes: ;
+  iadopt:hasProperty envthes:21524 ;
+  skos:broader envthes:30355 ;
+  iadopt:hasContextObject envthes:30264 ;
+  dc:modified "2024-09-10"^^xsd:date ;
+  dc:created "2024-06-06"^^xsd:date .
+
+iadopt:hasMatrix
+  rdfs:subPropertyOf iadopt:hasContextObject ;
+  rdfs:comment "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
+  rdfs:label "hasMatrix" .
+
+envthes:
+  skos:prefLabel "EnvThes"@en ;
+  a owl:Ontology, skos:ConceptScheme .
+
+envthes:30264
+  skos:prefLabel "surface water"@en ;
+  a skos:Concept .
+
+iadopt:hasObjectOfInterest
+  rdfs:comment "A Variable has an Entity whose Property is observed." ;
+  rdfs:label "hasObjectOfInterest" .
+
+envthes:30346
+  skos:prefLabel "stagnant"@en ;
+  a iadopt:Constraint, skos:Concept ;
+  iadopt:constrains envthes:30264 .
+
+iadopt:hasContextObject
+  rdfs:comment "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
+  rdfs:label "hasContextObject" .
+
+iadopt:hasConstraint
+  rdfs:comment "A Variable has a Constraint, that confines an Entity involved in the observation." ;
+  rdfs:label "hasConstraint" .
+
+envthes:30355
+  skos:prefLabel "water temperature, stagnant surface water"@en ;
+  a skos:Concept ;
+  skos:narrower envthes:30345 .
