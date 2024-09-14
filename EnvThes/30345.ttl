@@ -1,112 +1,69 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:iadopt="https://w3id.org/iadopt/ont/"
-         xmlns:dc="http://purl.org/dc/terms/"
-         xmlns:owl="http://www.w3.org/2002/07/owl#">
+@prefix envthes: <http://vocabs.lter-europe.net/EnvThes/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-  <skos:Concept rdf:about="http://vocabs.lter-europe.net/EnvThes/21524">
-    <skos:prefLabel xml:lang="zh">温度</skos:prefLabel>
-    <skos:prefLabel xml:lang="ja">温度</skos:prefLabel>
-    <skos:prefLabel xml:lang="en">temperature</skos:prefLabel>
-  </skos:Concept>
+envthes:21524
+  skos:prefLabel "温度"@zh, "温度"@ja, "temperature"@en ;
+  a skos:Concept .
 
-  <rdf:Description rdf:about="https://w3id.org/iadopt/ont/hasProperty">
-    <rdfs:comment>A Variable has a Property that characterizes an Entity.</rdfs:comment>
-    <rdfs:label>hasProperty</rdfs:label>
-  </rdf:Description>
+iadopt:Variable
+  rdfs:label "Variable" ;
+  a owl:Class .
 
-  <skos:Concept rdf:about="http://vocabs.lter-europe.net/EnvThes/30345">
-    <iadopt:hasMatrix>
-      <skos:Concept rdf:about="http://vocabs.lter-europe.net/EnvThes/30264">
-        <skos:prefLabel xml:lang="en">surface water</skos:prefLabel>
-      </skos:Concept>
-    </iadopt:hasMatrix>
+iadopt:hasProperty
+  rdfs:comment "A Variable has a Property that characterizes an Entity." ;
+  rdfs:label "hasProperty" .
 
-    <iadopt:hasConstraint>
-      <skos:Concept rdf:about="http://vocabs.lter-europe.net/EnvThes/30346">
-        <skos:prefLabel xml:lang="en">stagnant</skos:prefLabel>
-      </skos:Concept>
-    </iadopt:hasConstraint>
+envthes:30345
+  iadopt:hasConstraint envthes:30346 ;
+  dc:creator <https://orcid.org/0000-0003-2195-3997> ;
+  skos:prefLabel "water temperature of lake, stagnant surface water"@en ;
+  iadopt:hasObjectOfInterest <http://vocab.nerc.ac.uk/collection/S26/current/MAT00640/> ;
+  a skos:Concept, iadopt:Variable ;
+  skos:definition "temperature of the water body of a lake, stagnant surface water"@en ;
+  iadopt:hasMatrix <http://purl.obolibrary.org/obo/ENVO_00000020> ;
+  skos:inScheme envthes: ;
+  iadopt:hasProperty envthes:21524 ;
+  skos:broader envthes:30355 ;
+  iadopt:hasContextObject envthes:30264 ;
+  dc:modified "2024-09-10"^^xsd:date ;
+  dc:created "2024-06-06"^^xsd:date .
 
-    <skos:broader>
-      <skos:Concept rdf:about="http://vocabs.lter-europe.net/EnvThes/22313">
-        <skos:prefLabel xml:lang="en">water temperature</skos:prefLabel>
-        <skos:narrower rdf:resource="http://vocabs.lter-europe.net/EnvThes/30345"/>
-      </skos:Concept>
-    </skos:broader>
+iadopt:hasMatrix
+  rdfs:subPropertyOf iadopt:hasContextObject ;
+  rdfs:comment "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
+  rdfs:label "hasMatrix" .
 
-    <skos:prefLabel xml:lang="en">water temperature of stagnant surface water</skos:prefLabel>
-    <iadopt:hasContextObject>
-      <skos:Concept rdf:about="http://vocabs.lter-europe.net/EnvThes/21922">
-        <skos:prefLabel xml:lang="fi">vesikehä, hydrosfääri</skos:prefLabel>
-        <skos:prefLabel xml:lang="pl">hydrosfera</skos:prefLabel>
-        <skos:prefLabel xml:lang="sk">hydrosféra</skos:prefLabel>
-        <skos:prefLabel xml:lang="cs">hydrosféra</skos:prefLabel>
-        <skos:prefLabel xml:lang="ro">hidrosferă</skos:prefLabel>
-        <skos:prefLabel xml:lang="sl">hidrosfera</skos:prefLabel>
-        <skos:prefLabel xml:lang="pt">hidrosfera</skos:prefLabel>
-        <skos:prefLabel xml:lang="lt">hidrosfera</skos:prefLabel>
-        <skos:prefLabel xml:lang="hr">hidrosfera</skos:prefLabel>
-        <skos:prefLabel xml:lang="es">hidrosfera</skos:prefLabel>
-        <skos:prefLabel xml:lang="it">idrosfera</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">hydrosphère</skos:prefLabel>
-        <skos:prefLabel xml:lang="lv">hidrosfēra</skos:prefLabel>
-        <skos:prefLabel xml:lang="bg">Хидросфера</skos:prefLabel>
-        <skos:prefLabel xml:lang="ar">المحيط المائي - الغلاف المائي للأرض</skos:prefLabel>
-        <skos:prefLabel xml:lang="el">υδρόσφαιρα</skos:prefLabel>
-        <skos:prefLabel xml:lang="hu">hidroszféra</skos:prefLabel>
-        <skos:prefLabel xml:lang="no">hydrosfære</skos:prefLabel>
-        <skos:prefLabel xml:lang="da">hydrosfære</skos:prefLabel>
-        <skos:prefLabel xml:lang="sv">hydrosfär</skos:prefLabel>
-        <skos:prefLabel xml:lang="de">Hydrosphäre</skos:prefLabel>
-        <skos:prefLabel xml:lang="et">hüdrosfäär</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">hydrosphere</skos:prefLabel>
-        <skos:prefLabel xml:lang="nl">hydrosfeer</skos:prefLabel>
-      </skos:Concept>
-    </iadopt:hasContextObject>
+envthes:
+  skos:prefLabel "EnvThes"@en ;
+  a owl:Ontology, skos:ConceptScheme .
 
-    <iadopt:hasObjectOfInterest>
-      <skos:Concept rdf:about="http://vocabs.lter-europe.net/EnvThes/20538">
-        <skos:prefLabel xml:lang="zh">水</skos:prefLabel>
-        <skos:prefLabel xml:lang="ja">水</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">water</skos:prefLabel>
-      </skos:Concept>
-    </iadopt:hasObjectOfInterest>
+envthes:30264
+  skos:prefLabel "surface water"@en ;
+  a skos:Concept .
 
-    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-06</dc:modified>
-    <skos:inScheme>
-      <owl:Ontology rdf:about="http://vocabs.lter-europe.net/EnvThes/">
-        <skos:prefLabel xml:lang="en">EnvThes</skos:prefLabel>
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-      </owl:Ontology>
-    </skos:inScheme>
+iadopt:hasObjectOfInterest
+  rdfs:comment "A Variable has an Entity whose Property is observed." ;
+  rdfs:label "hasObjectOfInterest" .
 
-    <iadopt:hasProperty rdf:resource="http://vocabs.lter-europe.net/EnvThes/21524"/>
-    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-06</dc:created>
-  </skos:Concept>
+envthes:30346
+  skos:prefLabel "stagnant"@en ;
+  a iadopt:Constraint, skos:Concept ;
+  iadopt:constrains envthes:30264 .
 
-  <rdf:Description rdf:about="https://w3id.org/iadopt/ont/hasMatrix">
-    <rdfs:subPropertyOf>
-      <rdf:Description rdf:about="https://w3id.org/iadopt/ont/hasContextObject">
-        <rdfs:comment>A Variable has an Entity that provides additional background information regarding the ObjectOfInterest.</rdfs:comment>
-        <rdfs:label>hasContextObject</rdfs:label>
-      </rdf:Description>
-    </rdfs:subPropertyOf>
+iadopt:hasContextObject
+  rdfs:comment "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
+  rdfs:label "hasContextObject" .
 
-    <rdfs:comment>A Variable might have an Entity in which the ObjectOfInterest is contained.</rdfs:comment>
-    <rdfs:label>hasMatrix</rdfs:label>
-  </rdf:Description>
+iadopt:hasConstraint
+  rdfs:comment "A Variable has a Constraint, that confines an Entity involved in the observation." ;
+  rdfs:label "hasConstraint" .
 
-  <rdf:Description rdf:about="https://w3id.org/iadopt/ont/hasObjectOfInterest">
-    <rdfs:comment>A Variable has an Entity whose Property is observed.</rdfs:comment>
-    <rdfs:label>hasObjectOfInterest</rdfs:label>
-  </rdf:Description>
-
-  <rdf:Description rdf:about="https://w3id.org/iadopt/ont/hasConstraint">
-    <rdfs:comment>A Variable has a Constraint, that confines an Entity involved in the observation.</rdfs:comment>
-    <rdfs:label>hasConstraint</rdfs:label>
-  </rdf:Description>
-
-</rdf:RDF>
+envthes:30355
+  skos:prefLabel "water temperature, stagnant surface water"@en ;
+  a skos:Concept ;
+  skos:narrower envthes:30345 .
