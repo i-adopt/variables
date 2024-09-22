@@ -43,6 +43,11 @@ const engine = new QueryEngine();
 // scan for RDF files
 for await(const rawFilePath of Fs.glob( '**/*.ttl', { cwd: PATH_ROOT} ) ) {
 
+  // skip templates
+  if( rawFilePath.includes( 'template') ) {
+    continue;
+  }
+
   // parse
   const raw = await Fs.readFile( Path.join( PATH_ROOT, rawFilePath ), 'utf8' );
   const store = await parseRDF( raw );
@@ -204,6 +209,7 @@ for( const entry of data ) {
 // sort entries
 renderView.sections.sort( (a,b) => a.folder.localeCompare( b.folder ) );
 renderView.sections.forEach( (section) => section.entries.sort( (a,b) => a.variable.label.localeCompare( b.variable.label ) ) );
+
 
 // overview
 let template = await Fs.readFile( Path.join( PATH_TMPL, 'index.mustache' ), 'utf8' );
