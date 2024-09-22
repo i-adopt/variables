@@ -93,3 +93,17 @@ footer {
   padding: 10px 0;
   grid-area: bottom;
 }
+
+/* Visualization */
+
+.vis {
+  text-align: center;
+}
+
+.vis iframe {
+  border: 0;
+
+  max-width: 1024px;
+  width: 80vw;
+  height: 50vh;
+}
