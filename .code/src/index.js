@@ -176,6 +176,60 @@ for await(const rawFilePath of Fs.glob( '**/*.ttl', { cwd: PATH_ROOT} ) ) {
     entry.constraints = Object.values( entry.constraintLookup );
   }
 
+  // create makeshift JSON-LD representation
+  entry.jsonLD = {
+    '@context': 'https://w3id.org/iadopt/Variable.context.jsonld',
+
+    '@type':  'https://w3id.org/iadopt/ont/Variable',
+    '@id':    entry.variable.url,
+    label:    entry.variable.label,
+    comment:  entry.variable.comment,
+
+    property: {
+      '@type': [ 'https://w3id.org/iadopt/ont/Property' ],
+      '@id':    entry.prop?.url,
+      label:    entry.prop?.label,
+      comment:  entry.prop?.comment,
+    },
+
+    ooi: {
+      '@type': [ 'https://w3id.org/iadopt/ont/Entity' ],
+      '@id':    entry.ooi?.url,
+      label:    entry.ooi?.label,
+      comment:  entry.ooi?.comment,
+    },
+
+    context: [],
+    constraint: [],
+
+  };
+  if( 'matrix' in entry ) {
+    entry.jsonLD.matrix = {
+      '@type': [ 'https://w3id.org/iadopt/ont/Entity' ],
+      '@id':    entry.matrix?.url,
+      label:    entry.matrix?.label,
+      comment:  entry.matrix?.comment,
+    };
+  }
+  for( const c of entry.context ) {
+    entry.jsonLD.context.push({
+      '@type': [ 'https://w3id.org/iadopt/ont/Entity' ],
+      '@id':    c.url,
+      label:    c.label,
+      comment:  c.comment,
+    });
+  }
+  for( const c of entry.constraints ) {
+    entry.jsonLD.constraint.push({
+      '@type': [ 'https://w3id.org/iadopt/ont/Entity' ],
+      '@id':    c.url,
+      label:    c.label,
+      comment:  c.comment,
+      constrains: [ c.target ],
+    });
+  }
+  entry.jsonLDencoded = encodeURIComponent( JSON.stringify( entry.jsonLD ) );
+
   // add to result if valid entry
   data.push( entry );
 
