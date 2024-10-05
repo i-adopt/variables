@@ -45,12 +45,13 @@ envthes:22035
   skos:altLabel "temperature of air"@en ;
   dc:modified "2024-06-09"^^xsd:date ;
   skos:inScheme envthes: ;
-  iadopt:hasContextObject envthes:21920 ;
+  iadopt:hasMatrix envthes:21920 ;
   skos:scopeNote "US LTER controlled vocabulary"@en .
 
-iadopt:hasContextObject
-  rdfs:comment "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
-  rdfs:label "hasContextObject" .
+iadopt:hasMatrix
+  rdfs:subPropertyOf iadopt:hasContextObject ;
+  rdfs:comment "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
+  rdfs:label "hasMatrix" .
 
 envthes:21920
   skos:prefLabel "atmosfera"@pt, "atmosfera"@pl, "atmosfera"@lt, "atmosfera"@it, "atmosfera"@hr, "ατμόσφαιρα"@el, "atmosféra"@sk, "atmosféra"@cs, "atmósfera"@es, "atmosfære"@no, "atmosfære"@da, "atmosfär"@sv, "atmosferă"@ro, "atmosphère"@fr, "atmosfeer"@nl, "Атмосфера"@bg, "atmoszféra"@hu, "atmosfēra"@lv, "Atmosphäre"@de, "ozračje, atmosfera"@sl, "ilmakehä"@fi, "atmosfäär, õhkkond"@et, "الجو- الغلاف الجوي"@ar, "atmosphere"@en ;
